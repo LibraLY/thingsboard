@@ -1,0 +1,2993 @@
+{
+  "project": "数字绿色农业",
+  "notice": "模拟演示数据，非客户实测",
+  "farm_id": "DEMO-WC-01",
+  "plot_id": "DEMO-PLOT-A",
+  "season": 2026,
+  "batch_id": "DEMO-OAT-2026-001",
+  "crop": "燕麦/莜麦",
+  "base_name": "武川虚构示范基地",
+  "sample_source": "模拟演示数据，非客户实测",
+  "baseUrl": "http://localhost:8080",
+  "dashboardId": "da423a00-ca4a-11f1-88a2-4f0a77358a9e",
+  "dashboardUrl": "http://localhost:8080/dashboards/da423a00-ca4a-11f1-88a2-4f0a77358a9e",
+  "devices": {
+    "soil": {
+      "kind": "soil",
+      "device_code": "SOIL-A01",
+      "name": "数字绿色农业·A地块土壤探头1 SOIL-A01",
+      "label": "A地块土壤探头1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "da2f9c60-ca4a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/da2f9c60-ca4a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_a2": {
+      "kind": "soil",
+      "device_code": "SOIL-A02",
+      "name": "数字绿色农业·A地块土壤探头2 SOIL-A02",
+      "label": "A地块土壤探头2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a6bcb60-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a6bcb60-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_a3": {
+      "kind": "soil",
+      "device_code": "SOIL-A03",
+      "name": "数字绿色农业·A地块土壤探头3 SOIL-A03",
+      "label": "A地块土壤探头3",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a773d10-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a773d10-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_a4": {
+      "kind": "soil",
+      "device_code": "SOIL-A04",
+      "name": "数字绿色农业·A地块土壤探头4 SOIL-A04",
+      "label": "A地块土壤探头4",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a803dc0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a803dc0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_b1": {
+      "kind": "soil",
+      "device_code": "SOIL-B01",
+      "name": "数字绿色农业·B地块土壤探头1 SOIL-B01",
+      "label": "B地块土壤探头1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-B",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a860a20-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a860a20-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_b2": {
+      "kind": "soil",
+      "device_code": "SOIL-B02",
+      "name": "数字绿色农业·B地块土壤探头2 SOIL-B02",
+      "label": "B地块土壤探头2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-B",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a8f0ad0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a8f0ad0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_b3": {
+      "kind": "soil",
+      "device_code": "SOIL-B03",
+      "name": "数字绿色农业·B地块土壤探头3 SOIL-B03",
+      "label": "B地块土壤探头3",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-B",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a94fe40-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a94fe40-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_b4": {
+      "kind": "soil",
+      "device_code": "SOIL-B04",
+      "name": "数字绿色农业·B地块土壤探头4 SOIL-B04",
+      "label": "B地块土壤探头4",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-B",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0a9d1490-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0a9d1490-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_c1": {
+      "kind": "soil",
+      "device_code": "SOIL-C01",
+      "name": "数字绿色农业·C地块土壤探头1 SOIL-C01",
+      "label": "C地块土壤探头1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-C",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0aa44080-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0aa44080-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_c2": {
+      "kind": "soil",
+      "device_code": "SOIL-C02",
+      "name": "数字绿色农业·C地块土壤探头2 SOIL-C02",
+      "label": "C地块土壤探头2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-C",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0aaddd70-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0aaddd70-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_c3": {
+      "kind": "soil",
+      "device_code": "SOIL-C03",
+      "name": "数字绿色农业·C地块土壤探头3 SOIL-C03",
+      "label": "C地块土壤探头3",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-C",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0ab49430-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0ab49430-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_c4": {
+      "kind": "soil",
+      "device_code": "SOIL-C04",
+      "name": "数字绿色农业·C地块土壤探头4 SOIL-C04",
+      "label": "C地块土壤探头4",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-C",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0abc5c60-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0abc5c60-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_d1": {
+      "kind": "soil",
+      "device_code": "SOIL-D01",
+      "name": "数字绿色农业·D地块土壤探头1 SOIL-D01",
+      "label": "D地块土壤探头1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-D",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0ac499c0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0ac499c0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_d2": {
+      "kind": "soil",
+      "device_code": "SOIL-D02",
+      "name": "数字绿色农业·D地块土壤探头2 SOIL-D02",
+      "label": "D地块土壤探头2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-D",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0acc13d0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0acc13d0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_d3": {
+      "kind": "soil",
+      "device_code": "SOIL-D03",
+      "name": "数字绿色农业·D地块土壤探头3 SOIL-D03",
+      "label": "D地块土壤探头3",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-D",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0ad2a380-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0ad2a380-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "soil_d4": {
+      "kind": "soil",
+      "device_code": "SOIL-D04",
+      "name": "数字绿色农业·D地块土壤探头4 SOIL-D04",
+      "label": "D地块土壤探头4",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-D",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "soil_moisture": {
+          "unit": "%体积",
+          "label": "土壤体积含水率",
+          "min": 0,
+          "max": 100
+        },
+        "soil_temperature": {
+          "unit": "℃",
+          "label": "土壤温度",
+          "min": -40,
+          "max": 80
+        },
+        "soil_relative_moisture": {
+          "unit": "%田间持水量",
+          "label": "土壤相对含水量",
+          "min": 0,
+          "max": 333.4
+        }
+      },
+      "field_capacity_pct": 30,
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "土壤墒情不足": {
+          "create": "<60%",
+          "clear": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "土壤墒情干旱": {
+          "create": "<50%",
+          "clear": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "土壤墒情不足",
+          "metric": "soil_relative_moisture",
+          "threshold": "<60%",
+          "clear_threshold": ">=65%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012土壤墒情方案：通常60–80%适宜，50–60%不足；65%恢复线和持续60秒为演示工程参数。田间持水量30%为模拟参数，非实测。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        },
+        {
+          "type": "土壤墒情干旱",
+          "metric": "soil_relative_moisture",
+          "threshold": "<50%",
+          "clear_threshold": ">=55%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "农业部2012方案通常<50%为干旱；55%恢复线和持续60秒为演示工程参数，需按土壤/生育期校准。",
+          "source_url": "https://zzys.moa.gov.cn/tzgg/201204/t20120406_6310434.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "soil_moisture",
+        "soil_temperature",
+        "soil_relative_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0ad98150-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0ad98150-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse": {
+      "kind": "warehouse",
+      "device_code": "AIR-A1",
+      "name": "数字绿色农业·A仓空气温湿度1 AIR-A1",
+      "label": "A仓空气温湿度1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "DEMO-WH-A",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "da03f880-ca4a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/da03f880-ca4a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_a2": {
+      "kind": "warehouse",
+      "device_code": "AIR-A2",
+      "name": "数字绿色农业·A仓空气温湿度2 AIR-A2",
+      "label": "A仓空气温湿度2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "DEMO-WH-A",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0ae938c0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0ae938c0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_b1": {
+      "kind": "warehouse",
+      "device_code": "AIR-B1",
+      "name": "数字绿色农业·B仓空气温湿度1 AIR-B1",
+      "label": "B仓空气温湿度1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-B",
+      "batch_id": "DEMO-OAT-2026-002",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0af21260-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0af21260-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_b2": {
+      "kind": "warehouse",
+      "device_code": "AIR-B2",
+      "name": "数字绿色农业·B仓空气温湿度2 AIR-B2",
+      "label": "B仓空气温湿度2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-B",
+      "batch_id": "DEMO-OAT-2026-002",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0af96560-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0af96560-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_c1": {
+      "kind": "warehouse",
+      "device_code": "AIR-C1",
+      "name": "数字绿色农业·C仓空气温湿度1 AIR-C1",
+      "label": "C仓空气温湿度1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-C",
+      "batch_id": "DEMO-OAT-2026-003",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b006a40-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b006a40-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_c2": {
+      "kind": "warehouse",
+      "device_code": "AIR-C2",
+      "name": "数字绿色农业·C仓空气温湿度2 AIR-C2",
+      "label": "C仓空气温湿度2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-C",
+      "batch_id": "DEMO-OAT-2026-003",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b08a7a0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b08a7a0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_d1": {
+      "kind": "warehouse",
+      "device_code": "AIR-D1",
+      "name": "数字绿色农业·D仓空气温湿度1 AIR-D1",
+      "label": "D仓空气温湿度1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-D",
+      "batch_id": "DEMO-OAT-2026-004",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b0dd7c0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b0dd7c0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "warehouse_d2": {
+      "kind": "warehouse",
+      "device_code": "AIR-D2",
+      "name": "数字绿色农业·D仓空气温湿度2 AIR-D2",
+      "label": "D仓空气温湿度2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-D",
+      "batch_id": "DEMO-OAT-2026-004",
+      "season": 2026,
+      "metrics": {
+        "temperature": {
+          "unit": "℃",
+          "label": "仓内空气温度",
+          "min": -40,
+          "max": 80
+        },
+        "humidity": {
+          "unit": "%RH",
+          "label": "仓内空气相对湿度",
+          "min": 0,
+          "max": 100
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "仓内空气湿度关注": {
+          "create": ">65%RH",
+          "clear": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "仓内空气湿度关注",
+          "metric": "humidity",
+          "threshold": ">65%RH",
+          "clear_threshold": "<=62%RH",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "工程辅助提醒。FAO所述约65%平衡相对湿度是粮食平衡条件，不能等同任意仓内空气测点，更不能换算粮粒水分。",
+          "source_url": "https://www.fao.org/4/t1838e/T1838E1a.htm"
+        }
+      ],
+      "telemetryKeys": [
+        "temperature",
+        "humidity",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b18ad30-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b18ad30-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "grain_a": {
+      "kind": "grain",
+      "device_code": "GRAIN-A1",
+      "name": "数字绿色农业·A仓粮堆温度与粮粒水分 GRAIN-A1",
+      "label": "A仓粮堆温度与粮粒水分",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-A",
+      "batch_id": "DEMO-OAT-2026-001",
+      "season": 2026,
+      "metrics": {
+        "grain_temperature": {
+          "unit": "℃",
+          "label": "粮堆单点温度",
+          "min": -40,
+          "max": 80
+        },
+        "grain_moisture": {
+          "unit": "%湿基",
+          "label": "燕麦粮粒湿基水分",
+          "min": 0,
+          "max": 60
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "燕麦粮粒水分关注": {
+          "create": ">13.5%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "燕麦粮粒水分偏高": {
+          "create": ">=13.6%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "粮堆单点温度关注": {
+          "create": ">25℃",
+          "clear": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "燕麦粮粒水分关注",
+          "metric": "grain_moisture",
+          "threshold": ">13.5%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委燕麦安全储存参考为<13.6%湿基；13.5%预警及13.0%恢复为项目保守工程线，非中国强标。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "燕麦粮粒水分偏高",
+          "metric": "grain_moisture",
+          "threshold": ">=13.6%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委参考燕麦安全储存<13.6%湿基；适用当地条件，非中国强标，须结合储期、品质复核。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "粮堆单点温度关注",
+          "metric": "grain_temperature",
+          "threshold": ">25℃",
+          "clear_threshold": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "国家粮储局准低温储粮介绍单点最高25℃。本项目>25℃为人工核查工程线；不凭单点判断整仓平均温度或储粮安全。",
+          "source_url": "https://www.lswz.gov.cn/html/zmhd/jzxx/2022-08/23/content_271689.shtml"
+        }
+      ],
+      "telemetryKeys": [
+        "grain_temperature",
+        "grain_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b1e5280-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b1e5280-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "grain_b": {
+      "kind": "grain",
+      "device_code": "GRAIN-B1",
+      "name": "数字绿色农业·B仓粮堆温度与粮粒水分 GRAIN-B1",
+      "label": "B仓粮堆温度与粮粒水分",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-B",
+      "batch_id": "DEMO-OAT-2026-002",
+      "season": 2026,
+      "metrics": {
+        "grain_temperature": {
+          "unit": "℃",
+          "label": "粮堆单点温度",
+          "min": -40,
+          "max": 80
+        },
+        "grain_moisture": {
+          "unit": "%湿基",
+          "label": "燕麦粮粒湿基水分",
+          "min": 0,
+          "max": 60
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "燕麦粮粒水分关注": {
+          "create": ">13.5%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "燕麦粮粒水分偏高": {
+          "create": ">=13.6%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "粮堆单点温度关注": {
+          "create": ">25℃",
+          "clear": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "燕麦粮粒水分关注",
+          "metric": "grain_moisture",
+          "threshold": ">13.5%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委燕麦安全储存参考为<13.6%湿基；13.5%预警及13.0%恢复为项目保守工程线，非中国强标。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "燕麦粮粒水分偏高",
+          "metric": "grain_moisture",
+          "threshold": ">=13.6%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委参考燕麦安全储存<13.6%湿基；适用当地条件，非中国强标，须结合储期、品质复核。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "粮堆单点温度关注",
+          "metric": "grain_temperature",
+          "threshold": ">25℃",
+          "clear_threshold": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "国家粮储局准低温储粮介绍单点最高25℃。本项目>25℃为人工核查工程线；不凭单点判断整仓平均温度或储粮安全。",
+          "source_url": "https://www.lswz.gov.cn/html/zmhd/jzxx/2022-08/23/content_271689.shtml"
+        }
+      ],
+      "telemetryKeys": [
+        "grain_temperature",
+        "grain_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b268fe0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b268fe0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "grain_c": {
+      "kind": "grain",
+      "device_code": "GRAIN-C1",
+      "name": "数字绿色农业·C仓粮堆温度与粮粒水分 GRAIN-C1",
+      "label": "C仓粮堆温度与粮粒水分",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-C",
+      "batch_id": "DEMO-OAT-2026-003",
+      "season": 2026,
+      "metrics": {
+        "grain_temperature": {
+          "unit": "℃",
+          "label": "粮堆单点温度",
+          "min": -40,
+          "max": 80
+        },
+        "grain_moisture": {
+          "unit": "%湿基",
+          "label": "燕麦粮粒湿基水分",
+          "min": 0,
+          "max": 60
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "燕麦粮粒水分关注": {
+          "create": ">13.5%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "燕麦粮粒水分偏高": {
+          "create": ">=13.6%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "粮堆单点温度关注": {
+          "create": ">25℃",
+          "clear": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "燕麦粮粒水分关注",
+          "metric": "grain_moisture",
+          "threshold": ">13.5%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委燕麦安全储存参考为<13.6%湿基；13.5%预警及13.0%恢复为项目保守工程线，非中国强标。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "燕麦粮粒水分偏高",
+          "metric": "grain_moisture",
+          "threshold": ">=13.6%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委参考燕麦安全储存<13.6%湿基；适用当地条件，非中国强标，须结合储期、品质复核。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "粮堆单点温度关注",
+          "metric": "grain_temperature",
+          "threshold": ">25℃",
+          "clear_threshold": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "国家粮储局准低温储粮介绍单点最高25℃。本项目>25℃为人工核查工程线；不凭单点判断整仓平均温度或储粮安全。",
+          "source_url": "https://www.lswz.gov.cn/html/zmhd/jzxx/2022-08/23/content_271689.shtml"
+        }
+      ],
+      "telemetryKeys": [
+        "grain_temperature",
+        "grain_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b2ef450-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b2ef450-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "grain_d": {
+      "kind": "grain",
+      "device_code": "GRAIN-D1",
+      "name": "数字绿色农业·D仓粮堆温度与粮粒水分 GRAIN-D1",
+      "label": "D仓粮堆温度与粮粒水分",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "DEMO-WH-D",
+      "batch_id": "DEMO-OAT-2026-004",
+      "season": 2026,
+      "metrics": {
+        "grain_temperature": {
+          "unit": "℃",
+          "label": "粮堆单点温度",
+          "min": -40,
+          "max": 80
+        },
+        "grain_moisture": {
+          "unit": "%湿基",
+          "label": "燕麦粮粒湿基水分",
+          "min": 0,
+          "max": 60
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        "燕麦粮粒水分关注": {
+          "create": ">13.5%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "燕麦粮粒水分偏高": {
+          "create": ">=13.6%",
+          "clear": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        },
+        "粮堆单点温度关注": {
+          "create": ">25℃",
+          "clear": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        },
+        {
+          "type": "燕麦粮粒水分关注",
+          "metric": "grain_moisture",
+          "threshold": ">13.5%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委燕麦安全储存参考为<13.6%湿基；13.5%预警及13.0%恢复为项目保守工程线，非中国强标。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "燕麦粮粒水分偏高",
+          "metric": "grain_moisture",
+          "threshold": ">=13.6%",
+          "clear_threshold": "<=13.0%",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "加拿大粮委参考燕麦安全储存<13.6%湿基；适用当地条件，非中国强标，须结合储期、品质复核。",
+          "source_url": "https://www.canada.ca/en/grain-commission/services/grain-quality/manage-stored-grain/prevent-ochratoxin-a.html"
+        },
+        {
+          "type": "粮堆单点温度关注",
+          "metric": "grain_temperature",
+          "threshold": ">25℃",
+          "clear_threshold": "<=23℃",
+          "duration_seconds": 60,
+          "clear_duration_seconds": 60,
+          "basis": "国家粮储局准低温储粮介绍单点最高25℃。本项目>25℃为人工核查工程线；不凭单点判断整仓平均温度或储粮安全。",
+          "source_url": "https://www.lswz.gov.cn/html/zmhd/jzxx/2022-08/23/content_271689.shtml"
+        }
+      ],
+      "telemetryKeys": [
+        "grain_temperature",
+        "grain_moisture",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b36bc80-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b36bc80-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "weather_1": {
+      "kind": "weather",
+      "device_code": "WEATHER-1",
+      "name": "数字绿色农业·基地气象站1 WEATHER-1",
+      "label": "基地气象站1",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "air_temperature": {
+          "unit": "℃",
+          "label": "气温",
+          "min": -50,
+          "max": 60
+        },
+        "air_humidity": {
+          "unit": "%RH",
+          "label": "空气相对湿度",
+          "min": 0,
+          "max": 100
+        },
+        "rainfall": {
+          "unit": "mm",
+          "label": "本次累计降雨",
+          "min": 0,
+          "max": 1000
+        },
+        "wind_speed": {
+          "unit": "m/s",
+          "label": "风速",
+          "min": 0,
+          "max": 80
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "air_temperature",
+        "air_humidity",
+        "rainfall",
+        "wind_speed",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b3caff0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a4c8390-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b3caff0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "weather_2": {
+      "kind": "weather",
+      "device_code": "WEATHER-2",
+      "name": "数字绿色农业·基地气象站2 WEATHER-2",
+      "label": "基地气象站2",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "air_temperature": {
+          "unit": "℃",
+          "label": "气温",
+          "min": -50,
+          "max": 60
+        },
+        "air_humidity": {
+          "unit": "%RH",
+          "label": "空气相对湿度",
+          "min": 0,
+          "max": 100
+        },
+        "rainfall": {
+          "unit": "mm",
+          "label": "本次累计降雨",
+          "min": 0,
+          "max": 1000
+        },
+        "wind_speed": {
+          "unit": "m/s",
+          "label": "风速",
+          "min": 0,
+          "max": 80
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "air_temperature",
+        "air_humidity",
+        "rainfall",
+        "wind_speed",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b45fec0-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a4c8390-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b45fec0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "water_1": {
+      "kind": "water",
+      "device_code": "WATER-A",
+      "name": "数字绿色农业·A地块灌溉水表 WATER-A",
+      "label": "A地块灌溉水表",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-A",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "water_flow": {
+          "unit": "m³/h",
+          "label": "灌溉瞬时流量",
+          "min": 0,
+          "max": 1000
+        },
+        "water_total": {
+          "unit": "m³",
+          "label": "水表累计用水量",
+          "min": 0,
+          "max": 1000000000
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "water_flow",
+        "water_total",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b4cb580-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b4cb580-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "water_b": {
+      "kind": "water",
+      "device_code": "WATER-B",
+      "name": "数字绿色农业·B地块灌溉水表 WATER-B",
+      "label": "B地块灌溉水表",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-B",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "water_flow": {
+          "unit": "m³/h",
+          "label": "灌溉瞬时流量",
+          "min": 0,
+          "max": 1000
+        },
+        "water_total": {
+          "unit": "m³",
+          "label": "水表累计用水量",
+          "min": 0,
+          "max": 1000000000
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "water_flow",
+        "water_total",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "72359100-ca9f-11f1-8af2-696bf92ebb13",
+      "profileId": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/72359100-ca9f-11f1-8af2-696bf92ebb13"
+    },
+    "water_2": {
+      "kind": "water",
+      "device_code": "WATER-C",
+      "name": "数字绿色农业·C地块灌溉水表 WATER-C",
+      "label": "C地块灌溉水表",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-C",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "water_flow": {
+          "unit": "m³/h",
+          "label": "灌溉瞬时流量",
+          "min": 0,
+          "max": 1000
+        },
+        "water_total": {
+          "unit": "m³",
+          "label": "水表累计用水量",
+          "min": 0,
+          "max": 1000000000
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "water_flow",
+        "water_total",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "0b53e170-ca5a-11f1-88a2-4f0a77358a9e",
+      "profileId": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/0b53e170-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    "water_d": {
+      "kind": "water",
+      "device_code": "WATER-D",
+      "name": "数字绿色农业·D地块灌溉水表 WATER-D",
+      "label": "D地块灌溉水表",
+      "farm_id": "DEMO-WC-01",
+      "plot_id": "DEMO-PLOT-D",
+      "warehouse_id": "",
+      "batch_id": "",
+      "season": 2026,
+      "metrics": {
+        "water_flow": {
+          "unit": "m³/h",
+          "label": "灌溉瞬时流量",
+          "min": 0,
+          "max": 1000
+        },
+        "water_total": {
+          "unit": "m³",
+          "label": "水表累计用水量",
+          "min": 0,
+          "max": 1000000000
+        }
+      },
+      "thresholds": {
+        "设备数据无效": {
+          "create": "false/超量程",
+          "clear": "true",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      },
+      "alarm_rules": [
+        {
+          "type": "设备数据无效",
+          "metric": "data_valid",
+          "threshold": "false/超量程",
+          "basis": "项目数据质量规则：本采集器发现指标缺失或非数值时上报data_valid=false；标志无效或数值超量程立即告警；恢复需有效数据。未上报/离线另由时效检查处理。",
+          "source_url": "",
+          "duration_seconds": 0,
+          "clear_duration_seconds": 0
+        }
+      ],
+      "telemetryKeys": [
+        "water_flow",
+        "water_total",
+        "data_valid",
+        "updated_at",
+        "sample_source",
+        "device_code",
+        "kind"
+      ],
+      "id": "7243c1d0-ca9f-11f1-8af2-696bf92ebb13",
+      "profileId": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e",
+      "url": "http://localhost:8080/entities/devices/7243c1d0-ca9f-11f1-8af2-696bf92ebb13"
+    }
+  },
+  "telemetryContract": {
+    "temperature": "℃",
+    "humidity": "%RH",
+    "soil_moisture": "%体积含水率",
+    "soil_temperature": "℃",
+    "updated_at": "Asia/Shanghai datetime string",
+    "sample_source": "模拟演示数据，非客户实测"
+  },
+  "thresholdNotice": "农业资料参考线与项目工程参数已在每条原生告警中分别说明；空气相对湿度不等于粮粒水分；田间持水量30%为模拟参数。",
+  "fleetCount": 34,
+  "profiles": {
+    "soil": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e",
+    "warehouse": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e",
+    "grain": "0a444630-ca5a-11f1-88a2-4f0a77358a9e",
+    "weather": "0a4c8390-ca5a-11f1-88a2-4f0a77358a9e",
+    "water": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e"
+  },
+  "alarmRuleDefinitions": [
+    {
+      "id": "0a318180-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "soil",
+      "name": "设备数据无效",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a36b1a0-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "soil",
+      "name": "土壤墒情不足",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a3c7e00-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "soil",
+      "name": "土壤墒情干旱",
+      "profileId": "0a16cd90-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a4111e0-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "warehouse",
+      "name": "设备数据无效",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a42bf90-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "warehouse",
+      "name": "仓内空气湿度关注",
+      "profileId": "0a3ea0e0-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a464200-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "grain",
+      "name": "设备数据无效",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a47c8a0-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "grain",
+      "name": "燕麦粮粒水分关注",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a499d60-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "grain",
+      "name": "燕麦粮粒水分偏高",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a4b2400-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "grain",
+      "name": "粮堆单点温度关注",
+      "profileId": "0a444630-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a4e7f60-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "weather",
+      "name": "设备数据无效",
+      "profileId": "0a4c8390-ca5a-11f1-88a2-4f0a77358a9e"
+    },
+    {
+      "id": "0a5201d0-ca5a-11f1-88a2-4f0a77358a9e",
+      "kind": "water",
+      "name": "设备数据无效",
+      "profileId": "0a4fdef0-ca5a-11f1-88a2-4f0a77358a9e"
+    }
+  ]
+}

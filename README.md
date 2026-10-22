@@ -150,3 +150,8 @@ Starting with version 4.4, ThingsBoard is licensed under the [Business Source Li
 
 Versions released before 4.4 remain under the Apache 2.0 License.
 
+
+
+## Digital Green Agriculture deployment
+
+The local ThingsBoard deployment, 34-device agricultural telemetry simulator, native dashboard template, and pinned Supabase ES256 OIDC extension are maintained in [deployment/digital-green](deployment/digital-green/README.md). This directory contains reproducible source only; passwords, device tokens, and databases are excluded.

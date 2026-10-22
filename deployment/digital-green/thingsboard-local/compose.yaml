@@ -1,0 +1,60 @@
+name: thingsboard-local
+
+services:
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    mem_limit: 768m
+    environment:
+      POSTGRES_DB: thingsboard
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d thingsboard"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  thingsboard-ce:
+    image: thingsboard-cloud-sso:4.3.1.6
+    pull_policy: never
+    build:
+      context: ../digital-green-demo/auth-migration/thingsboard-cloud-sso
+    restart: unless-stopped
+    mem_limit: 3g
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:1883:1883"
+      - "127.0.0.1:8883:8883"
+      - "127.0.0.1:7070:7070"
+      - "127.0.0.1:5683-5688:5683-5688/udp"
+    environment:
+      TB_SUPABASE_OAUTH_ENABLED: "true"
+      TB_SUPABASE_OAUTH_CLIENT_ID: 6b9f38cc-77ae-45f9-b8f9-13f4f33072bc
+      TB_SUPABASE_OAUTH_REGISTRATION_ID: 0d82c5d0-ca4e-11f1-88a2-4f0a77358a9e
+      LOADER_PATH: /usr/share/thingsboard/extensions/cloud-sso.jar
+      TB_SERVICE_ID: tb-ce-node
+      TB_QUEUE_TYPE: in-memory
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      JAVA_OPTS: "-Xms512M -Xmx1536M"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  postgres-data:

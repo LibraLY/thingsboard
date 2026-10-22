@@ -1,0 +1,1888 @@
+{
+  "id": {
+    "entityType": "DASHBOARD",
+    "id": "da423a00-ca4a-11f1-88a2-4f0a77358a9e"
+  },
+  "createdTime": 1792255826336,
+  "tenantId": {
+    "entityType": "TENANT",
+    "id": "e97d3690-ca14-11f1-854c-53db55a40a2b"
+  },
+  "title": "三产融合 · 燕麦产业现场感知",
+  "name": "三产融合 · 燕麦产业现场感知",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "assignedCustomers": null,
+  "configuration": {
+    "description": "三产融合（内蒙古）高新科技股份有限公司燕麦产业场景的现场感知展示。后台保留模拟来源，现有台账不应自动认定为公司实测；不代表加工线或真实硬件已接入。",
+    "widgets": {
+      "2455b6e8-1ccc-4c20-9f9a-0b97112fb771": {
+        "id": "2455b6e8-1ccc-4c20-9f9a-0b97112fb771",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 4,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div class=\"dg\"><div class=\"eyebrow\">三产融合（内蒙古）高新科技股份有限公司 · 燕麦产业现场感知</div><div class=\"title\">34 台设备，4 个地块，4 座仓库</div><div class=\"sub\">种植地块 → 原粮批次 → 仓储环境<br>16 个土壤探头 · 8 个仓内温湿度 · 4 个粮堆/粮粒探头 · A/B/C/D四地块灌溉水表 · 2 个独立气象站<br>每 30 秒采集 88 项数值指标 → 每分钟去重入湖 → 质量检查 → 业务与 AI 查询</div></div>",
+            "markdownTextFunction": "",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "2b92a51e-f308-48c6-b496-b4f8b8329e7c": {
+        "id": "2b92a51e-f308-48c6-b496-b4f8b8329e7c",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 6,
+        "sizeY": 4,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "temperature",
+                  "color": "#19745a",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": true,
+            "markdownTextPattern": "",
+            "markdownTextFunction": "var d=data[0]||{};return `<div class=\"dg\"><div class=\"label\">A仓 · 温度</div><div class=\"kpi\">${d.temperature??\"—\"}<span class=\"unit\">℃</span></div><div class=\"small\">每 30 秒自动上报</div></div>`;",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "48544f65-2c39-469e-861c-c103919aee8b": {
+        "id": "48544f65-2c39-469e-861c-c103919aee8b",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 6,
+        "sizeY": 4,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#19745a",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": true,
+            "markdownTextPattern": "",
+            "markdownTextFunction": "var d=data[0]||{};return `<div class=\"dg\"><div class=\"label\">A仓空气相对湿度</div><div class=\"kpi\">${d.humidity??\"—\"}<span class=\"unit\">%RH</span></div><div class=\"small\">65%RH为工程辅助提醒；不是粮粒水分</div></div>`;",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "2e35ba75-4398-4c49-a432-f43b32709dd2": {
+        "id": "2e35ba75-4398-4c49-a432-f43b32709dd2",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 6,
+        "sizeY": 4,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "62ef1e49-62e2-50af-44fa-0ab20b22d38f",
+              "name": "燕麦演示地块",
+              "dataKeys": [
+                {
+                  "name": "soil_moisture",
+                  "type": "timeseries",
+                  "label": "soil_moisture",
+                  "color": "#19745a",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": true,
+            "markdownTextPattern": "",
+            "markdownTextFunction": "var d=data[0]||{};return `<div class=\"dg\"><div class=\"label\">A地块 · 土壤体积含水率</div><div class=\"kpi\">${d.soil_moisture??\"—\"}<span class=\"unit\">%</span></div><div class=\"small\">DEMO-PLOT-A · 持续监测土壤变化</div></div>`;",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "a2e35594-948c-4666-82c8-e20c4c7abf9b": {
+        "id": "a2e35594-948c-4666-82c8-e20c4c7abf9b",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 6,
+        "sizeY": 4,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "updated_at",
+                  "type": "timeseries",
+                  "label": "updated_at",
+                  "color": "#19745a",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": true,
+            "markdownTextPattern": "",
+            "markdownTextFunction": "var d=data[0]||{};return `<div class=\"dg\"><div class=\"label\">最近数据上报 · 上海时间</div><div style=\"font-size:22px;font-weight:600;line-height:1.5\">${d.updated_at??\"等待上报\"}</div><div class=\"small\"></div></div>`;",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "2e38a199-b10a-4a54-bc61-16e06389cb78": {
+        "id": "2e38a199-b10a-4a54-bc61-16e06389cb78",
+        "typeFullFqn": "system.time_series_chart",
+        "type": "timeseries",
+        "sizeX": 8,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "temperature",
+                  "type": "timeseries",
+                  "label": "仓库温度",
+                  "color": "#207961",
+                  "settings": {
+                    "type": "line",
+                    "showPoints": false
+                  },
+                  "units": "℃",
+                  "decimals": 1
+                }
+              ]
+            }
+          ],
+          "showTitle": true,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "showLegend": false,
+            "legendConfig": {
+              "direction": "column",
+              "position": "top",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": false,
+              "showTotal": false,
+              "showLatest": true
+            },
+            "thresholds": [],
+            "dataZoom": false,
+            "stack": false,
+            "yAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "left",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "xAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "bottom",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 10,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "ticksFormat": {},
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "legendLabelFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "legendLabelColor": "rgba(0, 0, 0, 0.76)",
+            "showTooltip": true,
+            "tooltipTrigger": "axis",
+            "tooltipValueFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500",
+              "lineHeight": "16px"
+            },
+            "tooltipValueColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipShowDate": true,
+            "tooltipDateFormat": {
+              "format": null,
+              "lastUpdateAgo": false,
+              "custom": false,
+              "auto": true,
+              "autoDateFormatSettings": {}
+            },
+            "tooltipDateFont": {
+              "family": "Roboto",
+              "size": 11,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "tooltipDateColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipDateInterval": true,
+            "tooltipBackgroundColor": "rgba(255, 255, 255, 0.76)",
+            "tooltipBackgroundBlur": 4,
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "yAxes": {
+              "default": {
+                "units": "℃",
+                "decimals": 1,
+                "show": true,
+                "label": "",
+                "labelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "600",
+                  "lineHeight": "1"
+                },
+                "labelColor": "rgba(0, 0, 0, 0.54)",
+                "position": "left",
+                "showTickLabels": true,
+                "tickLabelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "400",
+                  "lineHeight": "1"
+                },
+                "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+                "ticksFormatter": null,
+                "showTicks": true,
+                "ticksColor": "rgba(0, 0, 0, 0.54)",
+                "showLine": true,
+                "lineColor": "rgba(0, 0, 0, 0.54)",
+                "showSplitLines": true,
+                "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+                "id": "default",
+                "order": 0
+              }
+            },
+            "noAggregationBarWidthSettings": {
+              "strategy": "group",
+              "groupWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              },
+              "barWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              }
+            },
+            "animation": {
+              "animation": true,
+              "animationThreshold": 2000,
+              "animationDuration": 500,
+              "animationEasing": "cubicOut",
+              "animationDelay": 0,
+              "animationDurationUpdate": 300,
+              "animationEasingUpdate": "cubicOut",
+              "animationDelayUpdate": 0
+            },
+            "padding": "12px"
+          },
+          "title": "仓库温度",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "mobileHeight": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "titleFont": {
+            "size": 16,
+            "sizeUnit": "px",
+            "family": "Roboto",
+            "weight": "500",
+            "style": "normal",
+            "lineHeight": "24px"
+          },
+          "titleColor": "rgba(0, 0, 0, 0.87)",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "℃",
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "margin": "0px",
+          "borderRadius": "16px",
+          "iconSize": "0px",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "timewindow": {
+            "realtime": {
+              "interval": 30000,
+              "timewindowMs": 21600000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 2000
+            }
+          }
+        }
+      },
+      "3e57a7f0-8432-4791-975d-fd438ecb36fe": {
+        "id": "3e57a7f0-8432-4791-975d-fd438ecb36fe",
+        "typeFullFqn": "system.time_series_chart",
+        "type": "timeseries",
+        "sizeX": 8,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "仓库相对湿度",
+                  "color": "#c29134",
+                  "settings": {
+                    "type": "line",
+                    "showPoints": false
+                  },
+                  "units": "%RH",
+                  "decimals": 1
+                }
+              ]
+            }
+          ],
+          "showTitle": true,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "showLegend": false,
+            "legendConfig": {
+              "direction": "column",
+              "position": "top",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": false,
+              "showTotal": false,
+              "showLatest": true
+            },
+            "thresholds": [],
+            "dataZoom": false,
+            "stack": false,
+            "yAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "left",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "xAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "bottom",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 10,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "ticksFormat": {},
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "legendLabelFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "legendLabelColor": "rgba(0, 0, 0, 0.76)",
+            "showTooltip": true,
+            "tooltipTrigger": "axis",
+            "tooltipValueFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500",
+              "lineHeight": "16px"
+            },
+            "tooltipValueColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipShowDate": true,
+            "tooltipDateFormat": {
+              "format": null,
+              "lastUpdateAgo": false,
+              "custom": false,
+              "auto": true,
+              "autoDateFormatSettings": {}
+            },
+            "tooltipDateFont": {
+              "family": "Roboto",
+              "size": 11,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "tooltipDateColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipDateInterval": true,
+            "tooltipBackgroundColor": "rgba(255, 255, 255, 0.76)",
+            "tooltipBackgroundBlur": 4,
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "yAxes": {
+              "default": {
+                "units": "%RH",
+                "decimals": 1,
+                "show": true,
+                "label": "",
+                "labelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "600",
+                  "lineHeight": "1"
+                },
+                "labelColor": "rgba(0, 0, 0, 0.54)",
+                "position": "left",
+                "showTickLabels": true,
+                "tickLabelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "400",
+                  "lineHeight": "1"
+                },
+                "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+                "ticksFormatter": null,
+                "showTicks": true,
+                "ticksColor": "rgba(0, 0, 0, 0.54)",
+                "showLine": true,
+                "lineColor": "rgba(0, 0, 0, 0.54)",
+                "showSplitLines": true,
+                "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+                "id": "default",
+                "order": 0
+              }
+            },
+            "noAggregationBarWidthSettings": {
+              "strategy": "group",
+              "groupWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              },
+              "barWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              }
+            },
+            "animation": {
+              "animation": true,
+              "animationThreshold": 2000,
+              "animationDuration": 500,
+              "animationEasing": "cubicOut",
+              "animationDelay": 0,
+              "animationDurationUpdate": 300,
+              "animationEasingUpdate": "cubicOut",
+              "animationDelayUpdate": 0
+            },
+            "padding": "12px"
+          },
+          "title": "仓库相对湿度",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "mobileHeight": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "titleFont": {
+            "size": 16,
+            "sizeUnit": "px",
+            "family": "Roboto",
+            "weight": "500",
+            "style": "normal",
+            "lineHeight": "24px"
+          },
+          "titleColor": "rgba(0, 0, 0, 0.87)",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "%RH",
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "margin": "0px",
+          "borderRadius": "16px",
+          "iconSize": "0px",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "timewindow": {
+            "realtime": {
+              "interval": 30000,
+              "timewindowMs": 21600000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 2000
+            }
+          }
+        }
+      },
+      "17901afb-5d1c-4f06-a874-7907d5784931": {
+        "id": "17901afb-5d1c-4f06-a874-7907d5784931",
+        "typeFullFqn": "system.time_series_chart",
+        "type": "timeseries",
+        "sizeX": 8,
+        "sizeY": 6,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "62ef1e49-62e2-50af-44fa-0ab20b22d38f",
+              "name": "燕麦演示地块",
+              "dataKeys": [
+                {
+                  "name": "soil_moisture",
+                  "type": "timeseries",
+                  "label": "地块土壤体积含水率",
+                  "color": "#4089ab",
+                  "settings": {
+                    "type": "line",
+                    "showPoints": false
+                  },
+                  "units": "%",
+                  "decimals": 1
+                }
+              ]
+            }
+          ],
+          "showTitle": true,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "showLegend": false,
+            "legendConfig": {
+              "direction": "column",
+              "position": "top",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": false,
+              "showTotal": false,
+              "showLatest": true
+            },
+            "thresholds": [],
+            "dataZoom": false,
+            "stack": false,
+            "yAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "left",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "xAxis": {
+              "show": true,
+              "label": "",
+              "labelFont": {
+                "family": "Roboto",
+                "size": 12,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "600",
+                "lineHeight": "1"
+              },
+              "labelColor": "rgba(0, 0, 0, 0.54)",
+              "position": "bottom",
+              "showTickLabels": true,
+              "tickLabelFont": {
+                "family": "Roboto",
+                "size": 10,
+                "sizeUnit": "px",
+                "style": "normal",
+                "weight": "400",
+                "lineHeight": "1"
+              },
+              "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+              "ticksFormat": {},
+              "showTicks": true,
+              "ticksColor": "rgba(0, 0, 0, 0.54)",
+              "showLine": true,
+              "lineColor": "rgba(0, 0, 0, 0.54)",
+              "showSplitLines": true,
+              "splitLinesColor": "rgba(0, 0, 0, 0.12)"
+            },
+            "legendLabelFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "legendLabelColor": "rgba(0, 0, 0, 0.76)",
+            "showTooltip": true,
+            "tooltipTrigger": "axis",
+            "tooltipValueFont": {
+              "family": "Roboto",
+              "size": 12,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "500",
+              "lineHeight": "16px"
+            },
+            "tooltipValueColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipShowDate": true,
+            "tooltipDateFormat": {
+              "format": null,
+              "lastUpdateAgo": false,
+              "custom": false,
+              "auto": true,
+              "autoDateFormatSettings": {}
+            },
+            "tooltipDateFont": {
+              "family": "Roboto",
+              "size": 11,
+              "sizeUnit": "px",
+              "style": "normal",
+              "weight": "400",
+              "lineHeight": "16px"
+            },
+            "tooltipDateColor": "rgba(0, 0, 0, 0.76)",
+            "tooltipDateInterval": true,
+            "tooltipBackgroundColor": "rgba(255, 255, 255, 0.76)",
+            "tooltipBackgroundBlur": 4,
+            "background": {
+              "type": "color",
+              "color": "#fff",
+              "overlay": {
+                "enabled": false,
+                "color": "rgba(255,255,255,0.72)",
+                "blur": 3
+              }
+            },
+            "yAxes": {
+              "default": {
+                "units": "%",
+                "decimals": 1,
+                "show": true,
+                "label": "",
+                "labelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "600",
+                  "lineHeight": "1"
+                },
+                "labelColor": "rgba(0, 0, 0, 0.54)",
+                "position": "left",
+                "showTickLabels": true,
+                "tickLabelFont": {
+                  "family": "Roboto",
+                  "size": 12,
+                  "sizeUnit": "px",
+                  "style": "normal",
+                  "weight": "400",
+                  "lineHeight": "1"
+                },
+                "tickLabelColor": "rgba(0, 0, 0, 0.54)",
+                "ticksFormatter": null,
+                "showTicks": true,
+                "ticksColor": "rgba(0, 0, 0, 0.54)",
+                "showLine": true,
+                "lineColor": "rgba(0, 0, 0, 0.54)",
+                "showSplitLines": true,
+                "splitLinesColor": "rgba(0, 0, 0, 0.12)",
+                "id": "default",
+                "order": 0
+              }
+            },
+            "noAggregationBarWidthSettings": {
+              "strategy": "group",
+              "groupWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              },
+              "barWidth": {
+                "relative": true,
+                "relativeWidth": 2,
+                "absoluteWidth": 1000
+              }
+            },
+            "animation": {
+              "animation": true,
+              "animationThreshold": 2000,
+              "animationDuration": 500,
+              "animationEasing": "cubicOut",
+              "animationDelay": 0,
+              "animationDurationUpdate": 300,
+              "animationEasingUpdate": "cubicOut",
+              "animationDelayUpdate": 0
+            },
+            "padding": "12px"
+          },
+          "title": "地块土壤体积含水率",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": null,
+          "mobileHeight": null,
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "thermostat",
+          "iconColor": "#1F6BDD",
+          "useDashboardTimewindow": false,
+          "titleFont": {
+            "size": 16,
+            "sizeUnit": "px",
+            "family": "Roboto",
+            "weight": "500",
+            "style": "normal",
+            "lineHeight": "24px"
+          },
+          "titleColor": "rgba(0, 0, 0, 0.87)",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "widgetCss": "",
+          "pageSize": 1024,
+          "units": "%",
+          "decimals": 1,
+          "noDataDisplayMessage": "",
+          "margin": "0px",
+          "borderRadius": "16px",
+          "iconSize": "0px",
+          "timewindowStyle": {
+            "showIcon": false,
+            "iconSize": "24px",
+            "icon": null,
+            "iconPosition": "left",
+            "font": {
+              "size": 12,
+              "sizeUnit": "px",
+              "family": "Roboto",
+              "weight": "400",
+              "style": "normal",
+              "lineHeight": "16px"
+            },
+            "color": "rgba(0, 0, 0, 0.38)",
+            "displayTypePrefix": true
+          },
+          "timewindow": {
+            "realtime": {
+              "interval": 30000,
+              "timewindowMs": 21600000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 2000
+            }
+          }
+        }
+      },
+      "e0d440ce-f74f-4613-a8d3-378374dce021": {
+        "id": "e0d440ce-f74f-4613-a8d3-378374dce021",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 10,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+              "name": "燕麦演示仓库",
+              "dataKeys": [
+                {
+                  "name": "humidity",
+                  "type": "timeseries",
+                  "label": "humidity",
+                  "color": "#19745a",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div class=\"dg\"><div class=\"label\">原生告警规则 · 下方可确认和查看历史</div><div class=\"small\">墒情相对含水量：&lt;60%不足、&lt;50%干旱。<br>燕麦粮粒湿基水分：≥13.6%参考风险线。<br>粮堆单点温度：&gt;25℃人工核查线。<br>以上持续60秒触发；恢复采用迟滞与持续60秒。量程错误立即告警。</div></div>",
+            "markdownTextFunction": "",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "0558342d-580b-4e52-936a-1e72d981ae0c": {
+        "id": "0558342d-580b-4e52-936a-1e72d981ae0c",
+        "typeFullFqn": "system.cards.markdown_card",
+        "type": "latest",
+        "sizeX": 14,
+        "sizeY": 5,
+        "config": {
+          "datasources": [],
+          "showTitle": false,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0",
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div class=\"dg\"><div class=\"label\">从现场感知到数据应用</div><div style=\"font-size:17px;font-weight:600;line-height:1.5\">34台设备 → Airflow分钟工作流 → Iceberg数据湖 → 按账号授权查询</div><div class=\"small\">设备、指标、告警、基地、地块和批次编号同步纳管。设备告警由ThingsBoard原生规则产生，可确认与自动恢复。阈值依据和工程设置见告警详情，粮粒水分与空气湿度严格区分。</div></div>",
+            "markdownTextFunction": "",
+            "applyDefaultMarkdownStyle": false,
+            "markdownCss": ".dg{font-family:Roboto,\"Microsoft YaHei\",sans-serif;color:#153c35;box-sizing:border-box;height:100%;padding:12px 18px;overflow:auto}.eyebrow{font-size:12px;letter-spacing:1px;color:#487568;margin-bottom:6px}.title{font-size:28px;font-weight:650;line-height:1.3;margin:0 0 4px}.sub{font-size:13px;line-height:1.7;color:#60756e}.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:20px;background:#fef3d6;color:#925f0e;margin-top:4px}.kpi{font-size:36px;font-weight:600;line-height:1.25;color:#145b49}.unit{font-size:16px;font-weight:400;margin-left:5px}.label{font-size:14px;color:#50675f;margin-bottom:8px}.small{font-size:12px;line-height:1.7;color:#6d7f78;margin-top:8px}.alert{background:#fff3db;color:#8b5d12;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}.ok{background:#e8f4ec;color:#216744;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:13px}a{color:#176f55;text-decoration:none}"
+          },
+          "title": "Markdown/HTML Card",
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false,
+          "borderRadius": "16px"
+        }
+      },
+      "318dff42-3888-48fb-b5bf-6c7ff9fb4d75": {
+        "id": "318dff42-3888-48fb-b5bf-6c7ff9fb4d75",
+        "typeFullFqn": "system.cards.entities_table",
+        "type": "latest",
+        "sizeX": 12,
+        "sizeY": 10,
+        "config": {
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "entitiesTitle": "四地块水表",
+            "enableSearch": true,
+            "enableSelectColumnDisplay": true,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "reserveSpaceForHiddenAction": "true",
+            "displayEntityName": false,
+            "displayEntityLabel": true,
+            "displayEntityType": false,
+            "displayPagination": true,
+            "defaultPageSize": 5,
+            "pageStepCount": 3,
+            "pageStepIncrement": 10,
+            "defaultSortOrder": "device_code",
+            "useRowStyleFunction": false
+          },
+          "title": "四地块用水 · A / B / C / D",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "water",
+              "name": "四地块水表",
+              "dataKeys": [
+                {
+                  "name": "device_code",
+                  "label": "水表编号",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "plot_id",
+                  "label": "地块",
+                  "type": "timeseries",
+                  "settings": {
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "return value ? value.replace('DEMO-PLOT-','')+'地块' : '—';"
+                  },
+                  "color": "#19745a"
+                },
+                {
+                  "name": "water_flow",
+                  "label": "流量 m³/h",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "water_total",
+                  "label": "累计用水 m³",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "updated_at",
+                  "label": "上报时间",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                }
+              ]
+            }
+          ],
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "list",
+          "iconColor": null,
+          "digitalGreenFleet": true,
+          "borderRadius": "16px"
+        }
+      },
+      "854275e5-70d9-4632-aaef-a11d9679f2b7": {
+        "id": "854275e5-70d9-4632-aaef-a11d9679f2b7",
+        "typeFullFqn": "system.cards.entities_table",
+        "type": "latest",
+        "sizeX": 12,
+        "sizeY": 10,
+        "config": {
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "entitiesTitle": "基地气象站",
+            "enableSearch": true,
+            "enableSelectColumnDisplay": true,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "reserveSpaceForHiddenAction": "true",
+            "displayEntityName": false,
+            "displayEntityLabel": true,
+            "displayEntityType": false,
+            "displayPagination": true,
+            "defaultPageSize": 5,
+            "pageStepCount": 3,
+            "pageStepIncrement": 10,
+            "defaultSortOrder": "device_code",
+            "useRowStyleFunction": false
+          },
+          "title": "农业气象 · 两个独立气象站",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "weather",
+              "name": "基地气象站",
+              "dataKeys": [
+                {
+                  "name": "device_code",
+                  "label": "气象站编号",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "air_temperature",
+                  "label": "气温 ℃",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "air_humidity",
+                  "label": "湿度 %RH",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "rainfall",
+                  "label": "本次降雨 mm",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "wind_speed",
+                  "label": "风速 m/s",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "updated_at",
+                  "label": "上报时间",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                }
+              ]
+            }
+          ],
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "list",
+          "iconColor": null,
+          "digitalGreenFleet": true,
+          "borderRadius": "16px"
+        }
+      },
+      "83eeb8d6-a9a8-4a52-948b-42ff2b2b9094": {
+        "id": "83eeb8d6-a9a8-4a52-948b-42ff2b2b9094",
+        "typeFullFqn": "system.cards.entities_table",
+        "type": "latest",
+        "sizeX": 24,
+        "sizeY": 12,
+        "config": {
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "entitiesTitle": "设备",
+            "enableSearch": true,
+            "enableSelectColumnDisplay": true,
+            "enableStickyHeader": true,
+            "enableStickyAction": true,
+            "reserveSpaceForHiddenAction": "true",
+            "displayEntityName": false,
+            "displayEntityLabel": true,
+            "displayEntityType": false,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "pageStepCount": 3,
+            "pageStepIncrement": 10,
+            "defaultSortOrder": "device_code",
+            "useRowStyleFunction": false
+          },
+          "title": "34 台设备 · 最新采样与资产标识",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "showLegend": false,
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "fleet",
+              "name": "设备",
+              "dataKeys": [
+                {
+                  "name": "device_code",
+                  "label": "设备编号",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "kind",
+                  "label": "设备类型",
+                  "type": "timeseries",
+                  "settings": {
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "return ({soil:'土壤探头',warehouse:'仓内环境',grain:'粮堆与粮粒',weather:'气象站',water:'灌溉水表'})[value] || value;"
+                  },
+                  "color": "#19745a"
+                },
+                {
+                  "name": "plot_id",
+                  "label": "地块",
+                  "type": "timeseries",
+                  "settings": {
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "return value ? value.replace('DEMO-PLOT-','')+'地块' : '—';"
+                  },
+                  "color": "#19745a"
+                },
+                {
+                  "name": "warehouse_id",
+                  "label": "仓库",
+                  "type": "timeseries",
+                  "settings": {
+                    "useCellContentFunction": true,
+                    "cellContentFunction": "return value ? value.replace('DEMO-WH-','')+'仓' : '—';"
+                  },
+                  "color": "#19745a"
+                },
+                {
+                  "name": "soil_relative_moisture",
+                  "label": "相对墒情 %",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "humidity",
+                  "label": "空气 %RH",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "grain_moisture",
+                  "label": "粮粒湿基 %",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "grain_temperature",
+                  "label": "粮温 ℃",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                },
+                {
+                  "name": "updated_at",
+                  "label": "上报时间",
+                  "type": "timeseries",
+                  "settings": {},
+                  "color": "#19745a"
+                }
+              ]
+            }
+          ],
+          "configMode": "basic",
+          "actions": {},
+          "showTitleIcon": false,
+          "titleIcon": "list",
+          "iconColor": null,
+          "digitalGreenFleet": true,
+          "borderRadius": "16px"
+        }
+      },
+      "8c695634-a678-45c8-b62b-b11612930a6a": {
+        "id": "8c695634-a678-45c8-b62b-b11612930a6a",
+        "typeFullFqn": "system.alarm_widgets.alarms_table",
+        "type": "alarm",
+        "sizeX": 24,
+        "sizeY": 12,
+        "config": {
+          "timewindow": {
+            "selectedTab": 0,
+            "realtime": {
+              "realtimeType": 0,
+              "timewindowMs": 2592000000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "4px",
+          "settings": {
+            "enableSelection": true,
+            "enableSearch": true,
+            "displayDetails": true,
+            "allowAcknowledgment": true,
+            "allowClear": false,
+            "allowAssign": false,
+            "displayActivity": true,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "defaultSortOrder": "-createdTime",
+            "enableSelectColumnDisplay": true,
+            "enableStickyAction": false,
+            "enableFilter": true,
+            "entitiesTitle": null,
+            "alarmsTitle": "设备原生告警"
+          },
+          "title": "原生告警 · 自动触发、确认与恢复",
+          "dropShadow": false,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400,
+            "padding": "5px 10px 5px 10px"
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "alarmSource": {
+            "type": "entity",
+            "dataKeys": [
+              {
+                "name": "createdTime",
+                "type": "alarm",
+                "label": "Created time",
+                "color": "#2196f3",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.021092237451093787
+              },
+              {
+                "name": "originatorDisplayName",
+                "type": "alarm",
+                "label": "Originator",
+                "color": "#4caf50",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.2780007688856758
+              },
+              {
+                "name": "type",
+                "type": "alarm",
+                "label": "Type",
+                "color": "#f44336",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.7323586880398418
+              },
+              {
+                "name": "severity",
+                "type": "alarm",
+                "label": "Severity",
+                "color": "#ffc107",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "useCellContentFunction": false
+                },
+                "_hash": 0.09927019860088193
+              },
+              {
+                "name": "status",
+                "type": "alarm",
+                "label": "Status",
+                "color": "#607d8b",
+                "settings": {
+                  "useCellStyleFunction": false,
+                  "cellStyleFunction": "",
+                  "useCellContentFunction": false,
+                  "cellContentFunction": ""
+                },
+                "_hash": 0.6588418951443418
+              }
+            ],
+            "entityAliasId": "fleet",
+            "name": "34台设备"
+          },
+          "alarmSearchStatus": "ANY",
+          "alarmsPollingInterval": 5,
+          "showTitleIcon": false,
+          "titleIcon": "warning",
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "displayTimewindow": true,
+          "actions": {},
+          "alarmStatusList": [],
+          "alarmSeverityList": [],
+          "alarmTypeList": [],
+          "searchPropagatedAlarms": false,
+          "configMode": "basic",
+          "alarmFilterConfig": null,
+          "digitalGreenFleet": true,
+          "borderRadius": "16px"
+        }
+      }
+    },
+    "entityAliases": {
+      "77c08fa1-21b3-7d1c-b359-1f7405b57f9a": {
+        "id": "77c08fa1-21b3-7d1c-b359-1f7405b57f9a",
+        "alias": "燕麦演示仓库",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "da03f880-ca4a-11f1-88a2-4f0a77358a9e"
+          }
+        }
+      },
+      "62ef1e49-62e2-50af-44fa-0ab20b22d38f": {
+        "id": "62ef1e49-62e2-50af-44fa-0ab20b22d38f",
+        "alias": "燕麦演示地块",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "da2f9c60-ca4a-11f1-88a2-4f0a77358a9e"
+          }
+        }
+      },
+      "fleet": {
+        "id": "fleet",
+        "alias": "燕麦产业现场设备",
+        "filter": {
+          "type": "entityList",
+          "entityType": "DEVICE",
+          "entityList": [
+            "da2f9c60-ca4a-11f1-88a2-4f0a77358a9e",
+            "0a6bcb60-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a773d10-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a803dc0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a860a20-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a8f0ad0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a94fe40-ca5a-11f1-88a2-4f0a77358a9e",
+            "0a9d1490-ca5a-11f1-88a2-4f0a77358a9e",
+            "0aa44080-ca5a-11f1-88a2-4f0a77358a9e",
+            "0aaddd70-ca5a-11f1-88a2-4f0a77358a9e",
+            "0ab49430-ca5a-11f1-88a2-4f0a77358a9e",
+            "0abc5c60-ca5a-11f1-88a2-4f0a77358a9e",
+            "0ac499c0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0acc13d0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0ad2a380-ca5a-11f1-88a2-4f0a77358a9e",
+            "0ad98150-ca5a-11f1-88a2-4f0a77358a9e",
+            "da03f880-ca4a-11f1-88a2-4f0a77358a9e",
+            "0ae938c0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0af21260-ca5a-11f1-88a2-4f0a77358a9e",
+            "0af96560-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b006a40-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b08a7a0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b0dd7c0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b18ad30-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b1e5280-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b268fe0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b2ef450-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b36bc80-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b3caff0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b45fec0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b4cb580-ca5a-11f1-88a2-4f0a77358a9e",
+            "72359100-ca9f-11f1-8af2-696bf92ebb13",
+            "0b53e170-ca5a-11f1-88a2-4f0a77358a9e",
+            "7243c1d0-ca9f-11f1-8af2-696bf92ebb13"
+          ],
+          "resolveMultiple": true
+        }
+      },
+      "water": {
+        "id": "water",
+        "alias": "A–D地块灌溉水表",
+        "filter": {
+          "type": "entityList",
+          "entityType": "DEVICE",
+          "entityList": [
+            "0b4cb580-ca5a-11f1-88a2-4f0a77358a9e",
+            "72359100-ca9f-11f1-8af2-696bf92ebb13",
+            "0b53e170-ca5a-11f1-88a2-4f0a77358a9e",
+            "7243c1d0-ca9f-11f1-8af2-696bf92ebb13"
+          ],
+          "resolveMultiple": true
+        }
+      },
+      "weather": {
+        "id": "weather",
+        "alias": "基地气象站",
+        "filter": {
+          "type": "entityList",
+          "entityType": "DEVICE",
+          "entityList": [
+            "0b3caff0-ca5a-11f1-88a2-4f0a77358a9e",
+            "0b45fec0-ca5a-11f1-88a2-4f0a77358a9e"
+          ],
+          "resolveMultiple": true
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 60000,
+        "timewindowMs": 21600000
+      },
+      "aggregation": {
+        "type": "AVG"
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": false,
+      "showEntitiesSelect": false,
+      "showDashboardTimewindow": false,
+      "showDashboardExport": false,
+      "toolbarAlwaysOpen": false,
+      "hideToolbar": false,
+      "showFilters": false,
+      "showDashboardLogo": false,
+      "dashboardCss": ""
+    },
+    "states": {
+      "default": {
+        "name": "数字绿色农业",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "2455b6e8-1ccc-4c20-9f9a-0b97112fb771": {
+                "sizeX": 24,
+                "sizeY": 4,
+                "row": 0,
+                "col": 0,
+                "mobileOrder": 1,
+                "mobileHeight": 4
+              },
+              "2b92a51e-f308-48c6-b496-b4f8b8329e7c": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 4,
+                "col": 0,
+                "mobileOrder": 2,
+                "mobileHeight": 4
+              },
+              "48544f65-2c39-469e-861c-c103919aee8b": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 4,
+                "col": 6,
+                "mobileOrder": 3,
+                "mobileHeight": 4
+              },
+              "2e35ba75-4398-4c49-a432-f43b32709dd2": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 4,
+                "col": 12,
+                "mobileOrder": 4,
+                "mobileHeight": 4
+              },
+              "a2e35594-948c-4666-82c8-e20c4c7abf9b": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 4,
+                "col": 18,
+                "mobileOrder": 5,
+                "mobileHeight": 4
+              },
+              "2e38a199-b10a-4a54-bc61-16e06389cb78": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 8,
+                "col": 0,
+                "mobileOrder": 6,
+                "mobileHeight": 6
+              },
+              "3e57a7f0-8432-4791-975d-fd438ecb36fe": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 8,
+                "col": 8,
+                "mobileOrder": 7,
+                "mobileHeight": 6
+              },
+              "17901afb-5d1c-4f06-a874-7907d5784931": {
+                "sizeX": 8,
+                "sizeY": 6,
+                "row": 8,
+                "col": 16,
+                "mobileOrder": 8,
+                "mobileHeight": 6
+              },
+              "e0d440ce-f74f-4613-a8d3-378374dce021": {
+                "sizeX": 10,
+                "sizeY": 5,
+                "row": 14,
+                "col": 0,
+                "mobileOrder": 9,
+                "mobileHeight": 5
+              },
+              "0558342d-580b-4e52-936a-1e72d981ae0c": {
+                "sizeX": 14,
+                "sizeY": 5,
+                "row": 14,
+                "col": 10,
+                "mobileOrder": 10,
+                "mobileHeight": 5
+              },
+              "318dff42-3888-48fb-b5bf-6c7ff9fb4d75": {
+                "sizeX": 12,
+                "sizeY": 10,
+                "row": 19,
+                "col": 0,
+                "mobileOrder": 20,
+                "mobileHeight": 10
+              },
+              "854275e5-70d9-4632-aaef-a11d9679f2b7": {
+                "sizeX": 12,
+                "sizeY": 10,
+                "row": 19,
+                "col": 12,
+                "mobileOrder": 21,
+                "mobileHeight": 10
+              },
+              "83eeb8d6-a9a8-4a52-948b-42ff2b2b9094": {
+                "sizeX": 24,
+                "sizeY": 12,
+                "row": 29,
+                "col": 0,
+                "mobileOrder": 30,
+                "mobileHeight": 12
+              },
+              "8c695634-a678-45c8-b62b-b11612930a6a": {
+                "sizeX": 24,
+                "sizeY": 12,
+                "row": 41,
+                "col": 0,
+                "mobileOrder": 42,
+                "mobileHeight": 12
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eff4ef",
+              "color": "#153c35",
+              "columns": 24,
+              "backgroundSizeMode": "100%",
+              "autoFillHeight": false,
+              "mobileAutoFillHeight": false,
+              "mobileRowHeight": 48,
+              "margin": 12,
+              "outerMargin": true,
+              "layoutType": "default"
+            }
+          }
+        }
+      }
+    }
+  },
+  "resources": null,
+  "version": 13,
+  "externalId": null
+}

@@ -1,0 +1,20 @@
+# Only reproducible source belongs in this public repository.
+**/.env
+**/.env.*
+!**/.env.example
+**/private/
+**/private.json
+**/private.json.*
+**/*.log
+**/*.pid
+**/__pycache__/
+**/node_modules/
+**/dist/
+**/target/
+**/*.db
+**/*.sqlite*
+**/*.dump
+**/*.tgz
+**/simulator-status.json
+**/*-acceptance.json
+**/quality-injection.json
